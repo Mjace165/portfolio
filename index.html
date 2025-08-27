@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio of Your Name – developer, designer, and problem solver." />
+    <meta property="og:title" content="Your Name – Portfolio" />
+    <meta property="og:description" content="Projects, skills, and contact information." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <title>Akaya David – Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230ea5e9'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-size='64' fill='white' font-family='Arial, sans-serif'%3E%F0%9F%8C%9F%3C/text%3E%3C/svg%3E" />
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- =====================
+       NAVBAR
+       ===================== -->
+    <header aria-label="Primary">
+        <div class="container nav" role="navigation">
+            <a href="#home" class="brand" aria-label="Go to home">
+                <span class="logo" aria-hidden="true">AD</span>
+                <span>Akaya David</span>
+            </a>
+
+            <!-- Desktop menu -->
+            <nav class="menu" aria-label="Main">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Right-side controls (theme + mobile toggle) -->
+            <div class="nav-controls">
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark">
+                    <!-- Sun/Moon icon (inline SVG so it works offline) -->
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 0l1.79-1.8 1.42 1.41-1.8 1.79-1.41-1.4zM12 4V1h0v3zm0 19v-3h0v3zM4 13H1v-2h3v2zm22 0h-3v-2h3v2zM6.76 19.16l-1.42 1.42-1.79-1.8 1.41-1.41 1.8 1.79zM19.16 17.24l1.8 1.79-1.42 1.42-1.79-1.8 1.41-1.41zM12 7a5 5 0 100 10 5 5 0 000-10z" />
+                    </svg>
+                </button>
+                <button class="icon-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile drawer -->
+        <div class="drawer" id="mobileMenu" hidden>
+            <div class="drawer-inner container">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================
+       HERO
+       ===================== -->
+    <main id="home" class="container">
+        <section class="hero reveal" aria-labelledby="intro-title">
+            <div>
+                <div class="eyebrow">
+                    <span class="chip" aria-hidden="true">Open to work</span>
+                    <span class="help">Lagos</span>
+                </div>
+                <h1 id="intro-title">Hello, I'm <span style="color:var(--brand)">Akaya David</span> — I build reliable &
+                    accessible web experiences.</h1>
+                <p>
+                    I'm a Frontend Developer focused on delightful, performant interfaces. I care about clean code, and
+                    solving real problems.
+                </p>
+                <div class="hero-cta">
+                    <a class="btn" href="#projects">View Projects</a>
+                    <a class="btn ghost" href="#contact">Contact Me</a>
+                </div>
+            </div>
+            <figure class="hero-figure" aria-label="Profile photo">
+                <!-- Replace src with your image -->
+                <img class="avatar" src="ChatGPT Image Apr 8, 2025, 10_21_35 AM.png" alt="Portrait of Akaya David" />
+            </figure>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="reveal" aria-labelledby="about-title">
+            <header class="section-head">
+                <h2 class="section-title" id="about-title">About</h2>
+
+            </header>
+            <div class="card" style="padding:1.2rem">
+                <p>
+                    I'm a developer with a passion for turning ideas into elegant, scalable products. I enjoy working
+                    across
+                    the stack but specialize in modern Frontend (HTML, CSS, JavaScript, React).
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="reveal" aria-labelledby="skills-title">
+            <header class="section-head">
+                <h2 class="section-title" id="skills-title">Skills</h2>
+                <p class="section-desc">Tools and technologies I use frequently.</p>
+            </header>
+            <div class="skills">
+                <article class="skill card" aria-labelledby="skill-frontend">
+                    <h3 id="skill-frontend">Frontend</h3>
+                    <div class="tags" aria-label="Frontend tools">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                </article>
+                <article class="skill card" aria-labelledby="skill-tools">
+                    <h3 id="skill-tools">Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Vite</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="reveal" aria-labelledby="projects-title">
+            <header class="section-head">
+                <h2 class="section-title" id="projects-title">Projects</h2>
+                <p class="section-desc">Recent work I'm proud of.</p>
+            </header>
+            <div class="projects">
+                <!-- Project Card 1 -->
+                <article class="project card" aria-labelledby="proj1-title">
+                    <img src="img-calculator.png"
+                    alt="Calculator" />
+                    <div class="project-content">
+                        <h3 id="proj1-title">Calculator</h3>
+                        <p>Interactive calculator  that gives answer to your caculation</p>
+                        <div class="tags" aria-label="Technologies used">
+                            <span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span>
+                        </div>
+                        <div class="links" role="group" aria-label="Project links">
+                            <a class="btn small" href="#127.0.0.1:5500/Rock%20Paper%20Scissors_files/index.html"
+                                target="_blank">Live Demo</a>
+                            <a class="btn small ghost" href="#127.0.0.1:5500/Rock%20Paper%20Scissors_files/index.html"
+                                target="_blank" rel="noopener">Source Code</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project Card 2 -->
+                <article class="project card" aria-labelledby="proj2-title">
+                    <img src="img-form.png"
+                        alt="Multi Purpose Form" />
+                    <div class="project-content">
+                        <h3 id="proj2-title">Multi Purpose Form</h3>
+                        <p>A Multi Purpose  Form with info section and pricing sections.</p>
+                        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span></div>
+                        <div class="links">
+                            <a class="btn small" href="#" target="_blank" rel="noopener">Live Demo</a>
+                            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Source Code</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project Card 3 -->
+                <article class="project card" aria-labelledby="proj3-title">
+                    <img src="img-e com.png"
+                        alt="Ecommerce product grid preview" />
+                    <div class="project-content">
+                        <h3 id="proj3-title">E‑commerce UI</h3>
+                        <p>Product listing, cart, and checkout flow with keyboard-accessible interactions.</p>
+                        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span></div>
+                        <div class="links">
+                            <a class="btn small" href="https://sneak-ten.vercel.app/" target="_blank" rel="noopener">View Project</a>
+                        </div>
+                        </div>
+                </article>
+                    
+                    <!-- Project Card 4 -->
+                    <article class="project card" aria-labelledby="proj4-title">
+                        <img src="img-r p s.png" alt="Rock.Paper.Scissors" />
+                        <div class="project-content">
+                            <h3 id="proj4-title">Rock.Paper.Scissors</h3>
+                            <p>Interactive game with computer and also record your progress</p>
+                            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                            </div>
+                            <div class="links">
+                                <a class="btn small" href="https://rock-paper-scissors-five-lac-95.vercel.app/" target="_blank" rel="noopener">View Project</a>
+                            </div>
+                            
+                        </div>
+                </article>
+                <!-- Project Card 5 -->
+                <article class="project card" aria-labelledby="proj5-title">
+                    <img src="img-quiz.png " alt="Quiz App" />
+                    <div class="project-content">
+                        <h3 id="proj5-title">Quiz </h3>
+                        <p>An interactive quiz application with multiple categories.</p>
+                        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                        </div>
+                        <div class="links">
+                            <a class="btn small" href="#" target="_blank" rel="noopener">View Project</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="reveal" aria-labelledby="contact-title">
+            <header class="section-head">
+                <h2 class="section-title" id="contact-title">Contact</h2>
+                <p class="section-desc">Let's build something great together.</p>
+            </header>
+            <form class="contact card" id="contactForm" novalidate method="post"
+                action="https://formsubmit.co/davidakaya32@gmail.com">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your full name" required />
+                    <small class="help" id="nameHelp">Required.</small>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                    <small class="help" id="emailHelp">We'll never share your email.</small>
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project"
+                        required></textarea>
+                    <small class="help" id="msgHelp">Min 10 characters.</small>
+                </div>
+                <div style="display:flex; gap:.6rem; align-items:center;">
+                    <button class="btn" type="submit">Send Message</button>
+                    <span id="formStatus" class="help" role="status" aria-live="polite"></span>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+        <div class="container"
+            style="display:flex; flex-wrap:wrap; gap:.8rem; align-items:center; justify-content:space-between;">
+            <p>© <span id="year"></span> Akaya David. All rights reserved.</p>
+            <div style="display:flex; gap:.6rem;">
+                <a href="https://github.com/Mjace165" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--JAVASCRIPT (No deps)-->
+    <script src="script.js"></script>
+</body>
+
+</html>
