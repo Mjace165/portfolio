@@ -61,6 +61,98 @@
             if (message.length < 10) return showStatus('Message should be at least 10 characters.', true);
 
             // ...existing code...
+            // Lightbox functionality with next/prev navigation
+            document.addEventListener('DOMContentLoaded', function() {
+                const triggers = Array.from(document.querySelectorAll('.lightbox-trigger'));
+                const modal = document.getElementById('lightbox-modal');
+                const modalImg = document.getElementById('lightbox-img');
+                const closeBtn = document.getElementById('lightbox-close');
+                const prevBtn = document.getElementById('lightbox-prev');
+                const nextBtn = document.getElementById('lightbox-next');
+                const caption = document.getElementById('lightbox-caption');
+                const count = document.getElementById('lightbox-count');
+                let currentIndex = 0;
+                let startX = null;
+
+                function showImage(index) {
+                    if (index < 0) index = triggers.length - 1;
+                    if (index >= triggers.length) index = 0;
+                    currentIndex = index;
+                    const trigger = triggers[currentIndex];
+                    modalImg.src = trigger.getAttribute('href');
+                    modalImg.alt = trigger.querySelector('img').alt || '';
+                    caption.textContent = trigger.querySelector('img').alt || '';
+                    count.textContent = `Image ${currentIndex + 1} of ${triggers.length}`;
+                    modal.style.display = 'flex';
+                }
+
+                triggers.forEach((trigger, idx) => {
+                    trigger.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        showImage(idx);
+                    });
+                });
+
+                closeBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                    modalImg.src = '';
+                    caption.textContent = '';
+                    count.textContent = '';
+                });
+
+                prevBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    showImage(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    showImage(currentIndex + 1);
+                });
+
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        modalImg.src = '';
+                        caption.textContent = '';
+                        count.textContent = '';
+                    }
+                });
+
+                // Keyboard navigation
+                document.addEventListener('keydown', function(e) {
+                    if (modal.style.display === 'flex') {
+                        if (e.key === 'ArrowLeft') {
+                            showImage(currentIndex - 1);
+                        } else if (e.key === 'ArrowRight') {
+                            showImage(currentIndex + 1);
+                        } else if (e.key === 'Escape') {
+                            modal.style.display = 'none';
+                            modalImg.src = '';
+                            caption.textContent = '';
+                            count.textContent = '';
+                        }
+                    }
+                });
+
+                // Swipe gesture support
+                modalImg.addEventListener('touchstart', function(e) {
+                    if (e.touches.length === 1) {
+                        startX = e.touches[0].clientX;
+                    }
+                });
+                modalImg.addEventListener('touchend', function(e) {
+                    if (startX !== null && e.changedTouches.length === 1) {
+                        const endX = e.changedTouches[0].clientX;
+                        if (endX - startX > 50) {
+                            showImage(currentIndex - 1); // swipe right
+                        } else if (startX - endX > 50) {
+                            showImage(currentIndex + 1); // swipe left
+                        }
+                        startX = null;
+                    }
+                });
+            });
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const name = $('#name').value.trim();

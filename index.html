@@ -31,7 +31,6 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </nav>
 
@@ -58,7 +57,6 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -87,7 +85,9 @@
             </div>
             <figure class="hero-figure" aria-label="Profile photo">
                 <!-- Replace src with your image -->
-                <img class="avatar" src="ChatGPT Image Apr 8, 2025, 10_21_35 AM.png" alt="Portrait of Akaya David" />
+                                <a href="ChatGPT Image Apr 8, 2025, 10_21_35 AM.png" class="lightbox-trigger" data-lightbox>
+                                    <img class="avatar" src="ChatGPT Image Apr 8, 2025, 10_21_35 AM.png" alt="Portrait of Akaya David" />
+                                </a>
             </figure>
         </section>
 
@@ -143,7 +143,9 @@
             <div class="projects">
                 <!-- Project Card 1 -->
                 <article class="project card" aria-labelledby="proj1-title">
-                    <img src="img-calculator.png"
+                                        <a href="img-calculator.png" class="lightbox-trigger" data-lightbox>
+                                            <img src="img-calculator.png" alt="Calculator" />
+                                        </a>
                     alt="Calculator" />
                     <div class="project-content">
                         <h3 id="proj1-title">Calculator</h3>
@@ -153,16 +155,16 @@
                                 class="tag">JavaScript</span>
                         </div>
                         <div class="links" role="group" aria-label="Project links">
-                            <a class="btn small" href="#127.0.0.1:5500/Rock%20Paper%20Scissors_files/index.html"
-                                target="_blank">Live Demo</a>
-                            <a class="btn small ghost" href="#127.0.0.1:5500/Rock%20Paper%20Scissors_files/index.html"
-                                target="_blank" rel="noopener">Source Code</a>
+                            <a class="btn small" href="https://calculator-rose-tau-71.vercel.app/" target="_blank">View Project</a>
+                
                         </div>
                     </div>
                 </article>
                 <!-- Project Card 2 -->
                 <article class="project card" aria-labelledby="proj2-title">
-                    <img src="img-form.png"
+                                        <a href="img-form.png" class="lightbox-trigger" data-lightbox>
+                                            <img src="img-form.png" alt="Multi Purpose Form" />
+                                        </a>
                         alt="Multi Purpose Form" />
                     <div class="project-content">
                         <h3 id="proj2-title">Multi Purpose Form</h3>
@@ -177,7 +179,9 @@
                 </article>
                 <!-- Project Card 3 -->
                 <article class="project card" aria-labelledby="proj3-title">
-                    <img src="img-e com.png"
+                                        <a href="img-e com.png" class="lightbox-trigger" data-lightbox>
+                                            <img src="img-e com.png" alt="Ecommerce product grid preview" />
+                                        </a>
                         alt="Ecommerce product grid preview" />
                     <div class="project-content">
                         <h3 id="proj3-title">E‑commerce UI</h3>
@@ -192,7 +196,9 @@
                     
                     <!-- Project Card 4 -->
                     <article class="project card" aria-labelledby="proj4-title">
-                        <img src="img-r p s.png" alt="Rock.Paper.Scissors" />
+                                                <a href="img-r p s.png" class="lightbox-trigger" data-lightbox>
+                                                    <img src="img-r p s.png" alt="Rock.Paper.Scissors" />
+                                                </a>
                         <div class="project-content">
                             <h3 id="proj4-title">Rock.Paper.Scissors</h3>
                             <p>Interactive game with computer and also record your progress</p>
@@ -206,7 +212,9 @@
                 </article>
                 <!-- Project Card 5 -->
                 <article class="project card" aria-labelledby="proj5-title">
-                    <img src="img-quiz.png " alt="Quiz App" />
+                                        <a href="img-quiz.png " class="lightbox-trigger" data-lightbox>
+                                            <img src="img-quiz.png " alt="Quiz App" />
+                                        </a>
                     <div class="project-content">
                         <h3 id="proj5-title">Quiz </h3>
                         <p>An interactive quiz application with multiple categories.</p>
@@ -264,8 +272,18 @@
         </div>
     </footer>
 
-    <!--JAVASCRIPT (No deps)-->
-    <script src="script.js"></script>
+        <!-- Lightbox Modal -->
+            <div id="lightbox-modal" class="lightbox-modal" style="display:none;">
+                        <span class="lightbox-close" id="lightbox-close">&times;</span>
+                        <span class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</span>
+                        <div class="lightbox-content">
+                            <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded image" />
+                            <div class="lightbox-caption" id="lightbox-caption"></div>
+                            <div class="lightbox-count" id="lightbox-count"></div>
+                        </div>
+                        <span class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</span>
+            </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
